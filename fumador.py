@@ -1,7 +1,7 @@
 import time
 
 class Fumador:
-    def __init__(self, id, ing1, agente, fumado=False):
+    def __init__(self, id, ing1, agente):
         self.id = id
         self.ing1 = ing1
         self.agente = agente
@@ -16,5 +16,4 @@ class Fumador:
                 time.sleep(2)
                 self.agente.sem.release()
                 print(f'Fumador {self.id} ha terminado de fumar.')
-                self.fumado = True
-                return self.fumado
+                break
