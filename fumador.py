@@ -8,7 +8,7 @@ class Fumador:
 
     def esperar_ingrediente(self):
         while True:
-            if self.ing1 not in self.agente.ingredientes and len(self.agente.ingredientes) == 2:
+            if self.ing1 not in self.agente.ingredientes and len(self.agente.ingredientes) == 4:
                 self.agente.sem.acquire()
                 print(f'Fumador {self.id} con todos los ingredientes está fumando...')
                 self.agente.ingredientes.clear()
