@@ -16,5 +16,6 @@ class Simulacion:
             self.agente.poner_ingredientes()
             time.sleep(2)
 
-simulacion = Simulacion()
-simulacion.iniciar()
+if __name__ == '__main__':
+    simulacion = Simulacion()
+    simulacion.iniciar()

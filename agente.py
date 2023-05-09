@@ -17,15 +17,10 @@ class Agente:
         self.sem.release()
 
     def generar_ingredientes(self):
-        ing1 = random.choice(['tabaco', 'papel', 'cerillas', 'filtros', 'green'])
-        ing2 = random.choice(['tabaco', 'papel', 'cerillas', 'filtros', 'green'])
-        ing3 = random.choice(['tabaco', 'papel', 'cerillas', 'filtros', 'green'])
-        ing4 = random.choice(['tabaco', 'papel', 'cerillas', 'filtros', 'green'])
-        #asegurate de que cada ing sea distinto de lo anterior y que no se repita
-        while ing1 == ing2 or ing1 == ing3 or ing1 == ing4:
-            ing1 = random.choice(['tabaco', 'papel', 'cerillas', 'filtros', 'green'])
-        while ing2 == ing3 or ing2 == ing4:
-            ing2 = random.choice(['tabaco', 'papel', 'cerillas', 'filtros', 'green'])
-        while ing3 == ing4:
-            ing3 = random.choice(['tabaco', 'papel', 'cerillas', 'filtros', 'green'])
+        lista = ['tabaco', 'papel', 'cerillas', 'filtros', 'green']
+        elementos_aleatorios = random.sample(lista, k=4)
+        ing1 = elementos_aleatorios[0]
+        ing2 = elementos_aleatorios[1]
+        ing3 = elementos_aleatorios[2]
+        ing4 = elementos_aleatorios[3]
         return ing1, ing2, ing3, ing4
